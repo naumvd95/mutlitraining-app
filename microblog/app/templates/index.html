@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Hello, {{user.nickname}}!</h1>
+<h2>This is a test project (Mircoblog Mark 1) to increase your skills, enjoy!</h2>
+{% for post in posts %}
+<div style="color:#1569C7"><p>{{post.author.nickname}} says: <b>{{post.body}}</b> at {{post.timestamp}}</p></div>
+{% endfor %}
+{% endblock %}
