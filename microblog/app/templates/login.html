@@ -1,0 +1,20 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<h1 style="color:#daa520">Sign In</h1>
+<h2 style="color:#daa520">Provide security credentials</h2>
+<form action="" method="post" name="login">
+    {{form.hidden_tag()}}
+    <p style="color:#89C35C">
+        Please enter your OpenID:<br>
+        {{form.openid(size=80)}}<br>
+        {% for error in form.errors.openid %}
+        <span style="color: red;">[{{error}}]</span>
+        {% endfor %}<br>
+    </p>
+    <p style="color:#89C35C">{{form.remember_me}} Remember Me</p>
+    <p><input type="submit" value="Sign In"></p>
+    <p><input type="reset"></p>
+</form>
+{% endblock %}
