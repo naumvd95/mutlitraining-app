@@ -10,3 +10,4 @@ flask-wtf
 pytz
 flask-babel
 flup6
+requests

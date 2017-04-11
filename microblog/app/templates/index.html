@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-<h1 style="color:#daa520"> Hello, {{user.nickname}}!</h1>
-<h2 style="color:#daa520">This is a test project (Mircoblog Mark 1) to increase your skills, enjoy!</h2>
+<h1 style="color:#daa520"> Hello, {{user.nickname}} from {{user.location}} !</h1>
+<h3 style="color:#daa520">p.s. Location detected automatically, sorry for mistakes :(</h3>
 {% for post in posts %}
 <div style="color:#89C35C"><p>{{post.author.nickname}} says: <b>{{post.body}}</b> at {{post.timestamp}}</p></div>
 {% endfor %}
